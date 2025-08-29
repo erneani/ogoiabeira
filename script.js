@@ -22,19 +22,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Form submission
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Obrigado pela sua inscrição! Entraremos em contato em breve.");
-});
-
-// Navbar background on scroll
-window.addEventListener("scroll", () => {
+const adjustNavbarOnHeight = () => {
   const navbar = document.querySelector(".navbar");
 
   if (window.scrollY > 100) {
     navbar.style.background = "rgba(255, 255, 255, 0.98)";
+    navbar.style.opacity = "1";
   } else {
-    navbar.style.background = "rgba(255, 255, 255, 0.90)";
+    navbar.style.opacity = "0";
   }
+}
+
+// Navbar background on scroll
+window.addEventListener("scroll", adjustNavbarOnHeight);
+
+window.addEventListener("load", () => {
+  adjustNavbarOnHeight();
 });
