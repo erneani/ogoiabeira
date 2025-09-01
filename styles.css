@@ -380,6 +380,38 @@ body {
   color: white;
 }
 
+.programacao-description {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.programacao-coming-soon {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.programacao-coming-soon h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.programacao-coming-soon p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .programacao-days {
   max-width: 800px;
   margin: 0 auto;
@@ -926,6 +958,19 @@ body {
     .supporter {
         flex: 0 0 120px;
         max-width: 120px;
+    }
+
+    .programacao-coming-soon {
+        padding: 2rem 1rem;
+        margin: 2rem 0;
+    }
+
+    .programacao-coming-soon h3 {
+        font-size: 1.5rem;
+    }
+
+    .programacao-coming-soon p {
+        font-size: 1rem;
     }
 }
 
