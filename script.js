@@ -39,3 +39,23 @@ window.addEventListener("scroll", adjustNavbarOnHeight);
 window.addEventListener("load", () => {
   adjustNavbarOnHeight();
 });
+
+// Toggle day cards in programação section
+function toggleDay(dayNumber) {
+  const content = document.getElementById(`content-${dayNumber}`);
+  const icon = document.getElementById(`icon-${dayNumber}`);
+  
+  // Close all other day contents
+  for (let i = 1; i <= 5; i++) {
+    if (i !== dayNumber) {
+      const otherContent = document.getElementById(`content-${i}`);
+      const otherIcon = document.getElementById(`icon-${i}`);
+      otherContent.classList.remove('active');
+      otherIcon.classList.remove('rotated');
+    }
+  }
+  
+  // Toggle current day
+  content.classList.toggle('active');
+  icon.classList.toggle('rotated');
+}
